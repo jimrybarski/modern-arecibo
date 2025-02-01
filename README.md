@@ -21,7 +21,7 @@ Options:
 
 ### Why?
 
-See [this blog post](https://www.rybarski.com/arecibo/).
+The message encodes several numerical values, one of which was very inaccurate in retrospect. This tools regenerates the message with modern values. See [this blog post](https://www.rybarski.com/arecibo/) for details.
 
 ### Installation
 
