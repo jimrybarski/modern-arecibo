@@ -21,7 +21,7 @@ Options:
 
 ### Why?
 
-The message encodes several numerical values, one of which was relatively inaccurate in retrospect. This tools regenerates the message with updated values. See [this blog post](https://www.rybarski.com/arecibo/) for details.
+In 1974, a group of scientists broadcast a message towards Globular Cluster Messier 13 with the Arecibo telescope. The message was crafted in such a way that any aliens receiving it would potentially be able to understand some basic information about humanity. The message encodes several numerical values, one of which was inaccurate in retrospect. This tools regenerates the message with updated values. See [this blog post](https://www.rybarski.com/arecibo/) for details.
 
 ### Installation
 
