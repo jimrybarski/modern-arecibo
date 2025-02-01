@@ -19,6 +19,21 @@ Options:
 
 ![The Arecibo message with updated genome and population sizes](images/modern.png)
 
+### Why?
+
+See [this blog post](https://www.rybarski.com/arecibo/).
+
+### Installation
+
+`cargo install modern-arecibo`
+
+### Build
+
+```bash
+git clone https://github.com/jimrybarski/modern-arecibo
+cargo build --release
+```
+
 ### Examples
 
 Generate the original 1974 message:  
