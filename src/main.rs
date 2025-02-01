@@ -12,20 +12,29 @@ use utils::*;
 use clap::Parser;
 
 #[derive(Parser, Debug)]
+/// Generate images of the Arecibo message with a user-provided population and genome size.
 #[command(version, about, long_about = None)]
 struct Args {
+    /// The number of humans. Default is the value used in the original 1974 message.
     #[arg(long, default_value_t = POPULATION_1974)]
-    population: u64,
+    population: u128,
+    /// The number of base pairs in the haploid human reference genome. Default is the value used in the
+    /// original 1974 message.
     #[arg(long, default_value_t = GENOME_SIZE_1974)]
     genome: u64,
+    /// Output filename.
     #[arg(long, default_value_t = String::from("arecibo.png"))]
     output: String,
+    /// Highlight the component that represents the human genome size. 
     #[arg(long, default_value_t = false)]
     highlight_genome: bool,
+    /// Highlight the component that represents the human population size. 
     #[arg(long, default_value_t = false)]
     highlight_population: bool,
+    /// Only depict the first eight planets in the solar system.
     #[arg(long, default_value_t = false)]
     pluto_is_not_a_planet: bool,
+    /// The size of each block, in pixels.
     #[arg(long, default_value_t = 10)]
     scale: u32,
 }
@@ -33,13 +42,17 @@ struct Args {
 fn main() {
     let args = Args::parse();
 
-    if args.population > MAX_POPULATION {
-        eprintln!("Population cannot exceed 281,474,976,710,655");
+    if args.population > TELESCOPE_MAX_POPULATION {
+        eprintln!("Population exceeds 302,231,454,903,657,293,676,543 and will bleed into the telescope image!");
         exit(1);
     }
 
+    if args.population > PLANET_MAX_POPULATION {
+        eprintln!("Warning! Population exceeds 281,474,976,710,655 and will bleed into the solar system depiction. This will confuse the aliens.");
+    }
+
     if args.genome > MAX_GENOME_SIZE {
-        eprintln!("Genome size cannot exceed 4,294,967,296");
+        eprintln!("Genome size cannot exceed 4,294,967,295");
         exit(1);
     }
     let mut img: AbstractImage = [[BLACK; WIDTH]; HEIGHT];
