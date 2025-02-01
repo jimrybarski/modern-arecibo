@@ -1,6 +1,6 @@
 # modern-arecibo
 
-Generate images of the Arecibo message with a user-provided population and genome size
+Generate images of the Arecibo message with a user-provided population and genome size.
 
 ```
 Usage: modern-arecibo [OPTIONS]
