@@ -21,7 +21,7 @@ Options:
 
 ### Why?
 
-In 1974, a group of scientists broadcast a message towards Globular Cluster Messier 13 with the Arecibo telescope. The message was crafted in such a way that any aliens receiving it would potentially be able to understand some basic information about humanity. The message encodes several numerical values, one of which was inaccurate in retrospect. This tools regenerates the message with updated values. See [this blog post](https://www.rybarski.com/arecibo/) for details.
+In 1974, a group of scientists broadcast a message towards Globular Cluster Messier 13 with the Arecibo telescope. The message was crafted in such a way that any aliens receiving it would potentially be able to understand some basic information about humanity, including the size of the human genome. However, this was only known very approximately in 1974, and only in 2023 did scientists finally create a gapless reference genome. This tool recreates the Arecibo message with updated values for both the genome size and human population (configurable by the user). See [this blog post](https://www.rybarski.com/arecibo/) for details.
 
 ### Installation
 
@@ -34,7 +34,7 @@ git clone https://github.com/jimrybarski/modern-arecibo
 cargo build --release
 ```
 
-### Examples
+### Usage
 
 Generate the original 1974 message:  
 
@@ -48,7 +48,7 @@ Generate the message if it were being sent on February 1st, 2025:
 modern-arecibo --output "arecibo-modern.png" --population 8098171861 --genome 3117275501
 ```
 
-Deny the existence of Pluto:
+Exclude Pluto from the depiction of the solar system:
 
 ```bash
 modern-arecibo --output "arecibo-modern-no-pluto.png" --population 8098171861 --genome 3117275501 --pluto-is-not-a-planet

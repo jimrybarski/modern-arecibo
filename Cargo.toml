@@ -5,7 +5,7 @@ authors = ["Jim Rybarski <jim@rybarski.com>"]
 repository = "https://github.com/jimrybarski/modern-arecibo"
 keywords = ["astronomy", "arecibo", "genome", "biology"]
 categories = ["science", "science::bioinformatics::sequence-analysis", "multimedia::images", "command-line-utilities", "aerospace::space-protocols"]
-version = "1.0.3"
+version = "1.0.4"
 license = "MIT"
 edition = "2021"
 
